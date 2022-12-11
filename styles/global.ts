@@ -4,10 +4,10 @@ import { css } from "@emotion/react";
 export const reset = css`
   html,
   body {
-    background: #fff;
+    background: ${colors.white};
     width: 100%;
     height: 100%;
-    color: ${colors.white};
+    color: ${colors.black};
     font-family: SUIT, sans-serif;
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
@@ -15,7 +15,6 @@ export const reset = css`
     touch-action: manipulation;
   }
 
-  /* stylelint-disable-next-line selector-id-pattern */
   #__next,
   #root {
     width: 100%;

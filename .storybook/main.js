@@ -3,6 +3,7 @@ const path = require("path");
 module.exports = {
   stories: [
     "../stories/**/*.mdx",
+    "../stories/**/*.stories.@(js|jsx|ts|tsx)",
     "../(components|pages)/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   addons: [
@@ -16,7 +17,6 @@ module.exports = {
   },
   features: {
     storyStoreV7: true,
-    emotionAlias: false,
   },
   docs: {
     docsPage: true,
