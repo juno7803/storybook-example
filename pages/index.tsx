@@ -1,9 +1,11 @@
+import Button from "@/components/common/button/Button";
 import styled from "@emotion/styled";
 
 export default function Home() {
   return (
     <StyledContainer>
       <StyledTitle>Welcome Sopt 31th Web Part!</StyledTitle>
+      <Button>버튼입니다</Button>
     </StyledContainer>
   );
 }
