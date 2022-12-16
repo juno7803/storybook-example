@@ -6,6 +6,7 @@ export default function Home() {
     <StyledContainer>
       <StyledTitle>Welcome Sopt 31th Web Part!</StyledTitle>
       <Button>버튼입니다</Button>
+      <div>크로마틱 테스트</div>
     </StyledContainer>
   );
 }
