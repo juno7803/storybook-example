@@ -1,5 +1,6 @@
 import { Meta, StoryFn } from "@storybook/react";
 import Button from "@/components/common/button/Button";
+import Link from "next/link";
 
 export default {
   /* NOTE: title prop은 스토리가 들어갈 경로를 말해줄 수 있어요. components/common/button 이라고 만들면, "/"로 구분된 트리구조에 보여져요.
@@ -12,15 +13,31 @@ export default {
 // NOTE: 한 stories.tsx 파일에서 여러개의 story를 만들기 위해 재사용 가능한 Template을 만들 수 있어요.
 const Template: StoryFn<typeof Button> = (args) => <Button {...args} />;
 
+const handleClick = () => alert("clicked!");
 export const Primary = Template.bind({});
 Primary.args = {
   children: "Primary 버튼",
+  onClick: handleClick,
 };
 Primary.storyName = "Primary 버튼";
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   children: "Secondary 버튼",
+  onClick: handleClick,
   variant: "secondary",
 };
 Secondary.storyName = "Secondary 버튼";
+
+export const LinkButton = Template.bind({});
+LinkButton.decorators = [
+  (Story) => (
+    <Link href="/webpart">
+      <Story />
+    </Link>
+  ),
+];
+LinkButton.args = {
+  children: "Link 버튼",
+  onClick: handleClick,
+};
